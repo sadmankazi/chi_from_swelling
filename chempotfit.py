@@ -1,4 +1,10 @@
 
+# This code is based on the paper from sharp et al. in Macromolecules 2001, 34, 8752-8760
+# The paper is found here: https://pubs.acs.org/doi/10.1021/ma011163q 
+# This provides the fit to swelling data and calculates the water-polymer chi parameter
+# Swelling and volume fractions can be calculated from a QCM experiment
+
+
 import numpy as np 
 from scipy.optimize import curve_fit 
   
