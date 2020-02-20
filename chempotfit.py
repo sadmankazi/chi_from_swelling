@@ -18,10 +18,10 @@ os.chdir(sys.path[0])
 
 x = np.array([0.005, 0.01, 0.0125, 0.015, 0.016, 0.02, 0.021, 0.022]) # water fraction in film 
 y = np.array([0.3,   0.44, 0.5,    0.7,  0.73,  0.9, 0.92, 0.95]) # water activity  
-
+N =1000 # degree of polymerization
 # Test function with coefficients as parameters 
 def func(x, chi): 
-    return np.exp((1-x) + np.log(x) + chi * (1-x)**2)
+    return np.exp((1-x)*(1-1/N) + np.log(x) + chi * (1-x)**2)
   
  
 param, param_cov = curve_fit(func, x, y) 
